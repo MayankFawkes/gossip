@@ -2,6 +2,4 @@ fastapi
 uvicorn[standard]
 aiohttp
 aiofiles
-bs4
-lxml
 jinja2
