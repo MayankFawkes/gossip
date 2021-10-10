@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+	{% include 'head.html' %}
+
+<body>
+<!-- partial:index.partial.html -->
+<div class="home-page__content messages-page">
+  <div class="container-fluid h-100">
+    <div class="row px-0 h-100">
+	  {% include 'loading.html' %}
+      <!-- start message list section  -->
+	  {% include 'message.html' %}
+      <!-- end message list section  -->
+	  <!-- start me section  -->
+	  {% include 'me.html' %}
+      <!-- end me section  -->
+      <!-- start content section  -->
+	  {% include 'content.html' %}
+      <!-- end content section  -->
+      <!-- start infos section  -->
+      {% include 'info.html' %}
+      <!-- end infos section  -->
+      <!-- Modal -->
+	  {% include 'modal.html' %}
+      <!-- end Modal -->
+    </div>
+  </div>
+</div>
+<!-- partial -->
+{% include 'footer.html' %}
+</body>
+</html>

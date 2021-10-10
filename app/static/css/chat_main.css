@@ -1,0 +1,121 @@
+/* Modal */
+.modal-content {
+	background-color: var(--bg-page);
+	color: var(--colour-text);
+}
+.close {
+	color: var(--colour-text);
+}
+.close:hover {
+	color: var(--colour-text);
+}
+
+:is(.modal-header, .modal-footer) {
+    border-bottom: none;
+    border-top: none;
+}
+/* End Modal */
+/* User profile settings */
+.settings-profile {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 20%;
+	border-radius: 50%;
+}
+/* End User profile settings */
+/* User Friends settings */
+.noselect {
+	-webkit-touch-callout: none; /* iOS Safari */
+	  -webkit-user-select: none; /* Safari */
+	   -khtml-user-select: none; /* Konqueror HTML */
+		 -moz-user-select: none; /* Old versions of Firefox */
+		  -ms-user-select: none; /* Internet Explorer/Edge */
+			  user-select: none; /* Non-prefixed version, currently
+									supported by Chrome, Edge, Opera and Firefox */
+}
+
+.me {
+	background-color: var(--bg-page);
+	height: 100%;
+    width: 100%;
+	overflow: hidden;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.me_title {
+	color: var(--colour-text-darker);
+	font-weight: bold;
+	font-size: 2rem;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+/* End User Friends settings */
+.badge {
+	color: var(--bg-page);
+	background-color: var(--colour-text-darkest);
+}
+
+.nav {
+	font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.nav-link.active {
+	font-size: 1.2rem;
+}
+
+.nav-item a:hover {
+	color: var(--colour-text);
+}
+
+.me_header {
+	display: flex;
+	align-items: center;
+}
+
+.me_exit {
+  width: 10%;
+  height: 100%;
+  top: 50%;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.7rem;
+  cursor: pointer;
+  color: var(--colour-primary);
+}
+
+div.card {
+	max-width: 550px;
+	color: var(--colour-text-darker);
+	background-color: var(--search-form-bg-colour);
+}
+
+.card-body div.row {
+	align-items: center;
+}
+
+.user {
+	display: flex;
+	position: relative;
+	overflow: hidden;
+}
+
+.user img {
+	border-radius: 50%;
+	max-width: 55px;
+	width: 100%;
+    height: auto;
+}
+
+.acc_rej {
+	display: flex;
+    flex-direction: column;
+}
+
+.message__time {
+	font-size: 10px;
+    text-align: right;
+}
+
