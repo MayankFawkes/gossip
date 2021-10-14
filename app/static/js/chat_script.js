@@ -84,7 +84,9 @@ $(".user-profile__close").click(function () {
 	$profile.removeClass("user-profile--show");
 });
 
-$(".overlay").fadeOut()
+$(document).ready(() => {
+	$(".overlay").fadeOut()
+})
 
 function dateFormat(_date) {
 	_date = new Date(_date)
