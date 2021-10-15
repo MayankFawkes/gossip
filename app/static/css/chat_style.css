@@ -189,6 +189,7 @@ input[type]:-ms-input-placeholder {
 	background-color: var(--search-form-bg-colour);
     border: 1px solid var(--bg-page);
 	color: var(--colour-text-darkest);
+	border-radius: 15px;
 }
 
 .form_x input[type] {
