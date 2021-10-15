@@ -8,7 +8,7 @@ const getFormData = ($form) => {
     var unindexed_array = $form.serializeArray();
     var indexed_array = {};
 
-    $.map(unindexed_array, function(n, i){
+    $.map(unindexed_array, function(n, i) {
         indexed_array[n['name']] = n['value'];
     });
 
@@ -18,19 +18,19 @@ const getFormData = ($form) => {
 let is_dark = (myStorage.getItem("dark") === 'true');
 
 if (is_dark == true) {
-  $("body").toggleClass("dark-mode");
+    $("body").toggleClass("dark-mode");
 }
 
-$("#mode-toggle").click(function () {
-  $("body").toggleClass("dark-mode");
-  is_light = (myStorage.getItem("dark") === 'true');
-  if (is_light == true) {
-    is_dark = false
-    myStorage.setItem("dark", false)
-  } else {
-    is_dark = true
-    myStorage.setItem("dark", true)
-  }
+$("#mode-toggle").click(function() {
+    $("body").toggleClass("dark-mode");
+    is_light = (myStorage.getItem("dark") === 'true');
+    if (is_light == true) {
+        is_dark = false
+        myStorage.setItem("dark", false)
+    } else {
+        is_dark = true
+        myStorage.setItem("dark", true)
+    }
 });
 
 $(".messages-page__profile-settings").click(() => {
@@ -45,36 +45,36 @@ $chat_member_name = $(".chat-member__name")
 $chat_member_status = $(".chat-member__status")
 
 const makeMessageTime = (time) => {
-	let tm = createElement("div", {className: "message__time"});
-	tm.innerText = time;
-	return tm
+    let tm = createElement("div", { className: "message__time" });
+    tm.innerText = time;
+    return tm
 }
 const makeMessageElement = (time) => {
-	let li = $(createElement("li"));
-	let div = $(createElement("div", {className: "chat__time"}));
-	div.text(dateFormat(time));
-	li.append(div);
-	return li[0]
+    let li = $(createElement("li"));
+    let div = $(createElement("div", { className: "chat__time" }));
+    div.text(dateFormat(time));
+    li.append(div);
+    return li[0]
 }
 const makeMessage = (message, id, by, time) => {
-	let msg = createElement("div", {className: "chat__bubble", id: `chat-messages-${id}`});
-	msg = $(msg);
-	if (by === "me"){
-		msg.addClass("chat__bubble--me")
-	} else {
-		msg.addClass("chat__bubble--you")
-	}
-	msg.text(message);
-	msg.append(makeMessageTime(messageTime(time)));
-	return msg[0];
+    let msg = createElement("div", { className: "chat__bubble", id: `chat-messages-${id}` });
+    msg = $(msg);
+    if (by === "me") {
+        msg.addClass("chat__bubble--me")
+    } else {
+        msg.addClass("chat__bubble--you")
+    }
+    msg.text(message);
+    msg.append(makeMessageTime(messageTime(time)));
+    return msg[0];
 }
 
 const publish_chat_message = (pos, ele) => {
-	if (!pos){
-		$chat_message_list.children().first().prepend(ele)
-	} else {
-		$chat_message_list.children().last().append(ele)
-	}
+    if (!pos) {
+        $chat_message_list.children().first().prepend(ele)
+    } else {
+        $chat_message_list.children().last().append(ele)
+    }
 }
 
 // chatting js end
