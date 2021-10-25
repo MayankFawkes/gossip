@@ -18,13 +18,14 @@
     --colour-text-lighter: #9b9b9b;
     --colour-text-darker: #626262;
     --colour-text-darkest: #363636;
-    --border-color: #e8e7e7;
+    --border-color: #8ab4f8;
     --form-radius: 13px;
     --search-form-bg-colour: #f2f2f2;
     --send-form-bg-colour: #f2f2f2;
     --send-btn-box-shadow-colour: #7bbafd;
     --chat-bubble-me: #f2f2f2;
     --chat-bubble-you: var(--colour-primary);
+	--danger-red: #F32013;
 }
 
 .dark-mode {
@@ -41,12 +42,13 @@
     --colour-text-lighter: #868686;
     --colour-text-darker: #dcdcdc;
     --colour-text-darkest: #eaeaea;
-    --border-color: #4c4c4c;
+    --border-color: #8ab4f8;
     --search-form-bg-colour: #363636;
     --send-form-bg-colour: #363636;
     --send-btn-box-shadow-colour: #44515f;
     --chat-bubble-me: #363636;
     --chat-bubble-you: var(--colour-primary);
+	--danger-red: #F32013;
 }
 
 
@@ -175,6 +177,10 @@ body {
     position: relative;
 }
 
+textarea {
+	resize: none;
+ }
+
 input[type]::-moz-placeholder {
     color: var(--colour-text-lighter);
     font-size: 0.9rem;
@@ -192,19 +198,19 @@ input[type]:-ms-input-placeholder {
 	border-radius: 15px;
 }
 
-.form_x input[type] {
+.form_x :is(input[type], textarea) {
     background-color: var(--search-form-bg-colour);
     border: 1px solid var(--bg-page);
 	color: var(--colour-text-darkest);
 	padding: 1.5rem;
 }
 
-.form_x input[type]::placeholder {
+.form_x :is(input[type], textarea)::placeholder {
     color: var(--colour-text-lighter);
     font-size: 0.9rem;
 }
 
-.form_x input[type]:focus {
+.form_x :is(input[type], textarea):focus {
     outline: none;
     box-shadow: none;
 	background-color: var(--bg-page);
@@ -212,20 +218,29 @@ input[type]:-ms-input-placeholder {
     color: var(--colour-text);
 }
 
-.form_x input[type]:-moz-placeholder-shown {
+.form_x :is(input[type], textarea):-moz-placeholder-shown {
     background-color: var(--search-form-bg-colour);
     border: 1px solid var(--bg-page);
 }
 
-.form_x input[type]:-ms-input-placeholder {
+.form_x :is(input[type], textarea):-ms-input-placeholder {
     background-color: var(--search-form-bg-colour);
     border: 1px solid var(--bg-page);
 }
 
-.form_x input:placeholder-shown {
+.form_x :is(input, textarea):placeholder-shown {
     background-color: var(--search-form-bg-colour);
     border: 1px solid var(--bg-page);
 }
+
+.form_x :is(input[type], textarea).danger {
+	color: var(--colour-text-darkest);
+	padding: 1.5rem;
+	background-color: var(--bg-page);
+    border-color: var(--danger-red);
+    color: var(--danger-red);
+}
+
 
 .custom-form__send-wrapper input {
     padding-right: 6rem;

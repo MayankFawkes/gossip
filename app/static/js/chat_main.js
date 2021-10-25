@@ -1,40 +1,18 @@
 const myStorage = window.localStorage;
+const myModal = new bootstrap.Modal(document.getElementById('settingModalCenter'))
 const createElement = (tag_name, properties = {}) => {
     const e = document.createElement(tag_name);
     Object.assign(e, properties);
     return e
 }
-const getFormData = ($form) => {
-    var unindexed_array = $form.serializeArray();
-    var indexed_array = {};
-
-    $.map(unindexed_array, function(n, i) {
-        indexed_array[n['name']] = n['value'];
-    });
-
-    return indexed_array;
+const forms = {
+	settings_account: {url:"", request:"", rid:""},
+	settings_change_password: {url:"", request:"", rid:""},
+	settings_social: {url:"", request:"", rid:""}
 }
-
-let is_dark = (myStorage.getItem("dark") === 'true');
-
-if (is_dark == true) {
-    $("body").toggleClass("dark-mode");
-}
-
-$("#mode-toggle").click(function() {
-    $("body").toggleClass("dark-mode");
-    is_light = (myStorage.getItem("dark") === 'true');
-    if (is_light == true) {
-        is_dark = false
-        myStorage.setItem("dark", false)
-    } else {
-        is_dark = true
-        myStorage.setItem("dark", true)
-    }
-});
 
 $(".messages-page__profile-settings").click(() => {
-    $("#settingModalCenter").modal();
+    myModal.show();
 })
 
 // chatting js

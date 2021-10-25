@@ -82,13 +82,13 @@ select:focus {
     background-color: #0779e4
 }
 
-.danger {
+button.danger {
     background-color: #fff;
     color: #e20404;
     border: 1px solid #ddd
 }
 
-.danger:hover {
+button.danger:hover {
     background-color: #e20404;
     color: #fff
 }
@@ -105,3 +105,42 @@ select:focus {
 
 
 /* Toggle dark and light mode */
+.context {
+	position: absolute;
+    top: 15px;
+    right: 50px;
+}
+
+.context input {
+	width: 50px;
+	height: 25px;
+	background: #111;
+	appearance: none;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	border-radius: 15px;
+	cursor: pointer;
+}
+
+.context input:checked {
+	background: #fff;
+}
+
+.context input::after {
+	content: "";
+	position: absolute;
+	height: 15px;
+	width: 15px;
+	border-radius: 50%;
+	background: #ffee00;
+	transform: translate(5px, 5px);
+	transition: 0.3s linear;
+}
+
+.context input:checked::after {
+	inset: unset;
+	background: transparent;
+	box-shadow: 5px 5px 0 #353b48;
+	transform: translate(calc(50px - 25px), -0px);
+}
+/* END Toggle dark and light mode */

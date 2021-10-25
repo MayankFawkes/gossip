@@ -62,7 +62,6 @@ $(".messaging-member").click(function () {
 	$me.hide();
 	$chat.show();
 	$profile.show();
-	$chat.fadeIn();
 	$chat.addClass("chat--show");
 	viewChat()
 });

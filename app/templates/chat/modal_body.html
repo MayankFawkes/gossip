@@ -38,28 +38,15 @@
 						</div>
 					</div>
 					<div class="row py-2">
-						<div class="col-md-6"> 
-							<label for="country">Country</label> 
-							<select name="country" id="country" class="">
-								<option value="india" selected>India</option>
-								<option value="usa">USA</option>
-								<option value="uk">UK</option>
-								<option value="uae">UAE</option>
-							</select> 
-						</div>
-						<div class="col-md-6 pt-md-0 pt-3" id="lang"> <label for="language">Language</label>
-							<div class="arrow"> <select name="language" id="language" class="">
-							<option value="english" selected>English</option>
-							<option value="english_us">English (United States)</option>
-							<option value="enguk">English UK</option>
-							<option value="arab">Arabic</option>
-						</select> </div>
+						<div class="col-md-12">
+							<label for="about">About me</label>
+							<textarea class="form-control" onkeypress="if (this.value.length > 100) { return false; }" id="about" name="about" placeholder="Make your about me" rows="5"></textarea>
 						</div>
 					</div>
+					<div class="py-3 pb-4 border-bottom">
+						<button class="btn btn-primary mr-3">Save Changes</button>
+					</div>
 				</form>
-				<div class="py-3 pb-4 border-bottom">
-					<button class="btn btn-primary mr-3">Save Changes</button>
-				</div>
 				<div class="d-sm-flex align-items-center pt-3" id="account_delete">
 					<div>
 						<b>Delete your account</b>
@@ -93,11 +80,11 @@
 
 					<div class="mb-4 form_x">
 						<label>Current Password</label>
-						<input type="password" class="form-control" placeholder="Current Password">
+						<input type="password" name="oldpassword" class="form-control" placeholder="Current Password">
 						<label>New Password</label>
-						<input type="password" class="form-control" placeholder="New Password">
+						<input type="password" name="newpassword" class="form-control" placeholder="New Password">
 						<label>Confirm Password</label>
-						<input type="password" class="form-control" placeholder="Confirm Password">
+						<input type="password" name="confirmpassword" class="form-control" placeholder="Confirm Password">
 					</div>
 
 					<div class="py-3 pb-4">
@@ -141,12 +128,13 @@
                             </div>
                             <input name="email" type="text" class="form-control" placeholder="Email Address">
                         </div>
+						<div class="py-3 pb-4">
+							<button class="btn btn-primary mr-3">Save Changes</button>
+						</div>
                     </form>
                 </div>
 
-                <div class="py-3 pb-4">
-                    <button class="btn btn-primary mr-3">Save Changes</button>
-                </div>
+                
             </div>
         </div>
         <!-- Social Settings end -->
